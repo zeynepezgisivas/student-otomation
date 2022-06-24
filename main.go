@@ -42,8 +42,6 @@ func main() {
 	router.Put("/teacher/{id}", api.UpdateTeacher)
 	router.Get("/teacher", api.ListTeacher)
 
-	router.Post("/testapi", api.Testapi)
-
 	log.Println("listening on", 18000)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", 18000), router))
 }
